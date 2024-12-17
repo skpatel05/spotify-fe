@@ -148,7 +148,7 @@ const Home: React.FC = () => {
   <Typography variant="h4" className="playlists-title">Your Playlists:</Typography>
   {playlists.length > 0 ? (
     <Grid container spacing={12} className="grid-container" >
-    {playlists.map((playlist, index) => (
+    {playlists.map((playlist) => (
       <Grid item xs={12} sm={6} md={4} key={playlist._id}>
         <Box className="playlist-card">
           <Typography variant="h6" className="playlist-name">{playlist.name}</Typography>

@@ -1,18 +1,6 @@
 // src/services/apiService.ts
 import axios, { AxiosInstance, AxiosResponse, AxiosError } from "axios";
 
-// Define the types for the request payloads
-interface RegisterData {
-  username: string;
-  email: string;
-  password: string;
-}
-
-interface LoginData {
-  username: string;
-  password: string;
-}
-
 interface PlaylistData {
   playlistName: string;
   description: string;
