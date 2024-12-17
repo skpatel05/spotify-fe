@@ -1,0 +1,117 @@
+.home-container {
+  padding: 40px;
+  margin-top: 40px;
+  gap: 20px;
+  background-color: #f8f8f8; /* Light background to contrast with the cards */
+  border-radius: 8px;
+}
+
+.home-title {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.playlists-title {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.playlist-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px; /* Softer rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Larger shadow for better depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playlist-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.playlist-name {
+  font-size: 1.6rem; /* Larger name font */
+  font-weight: bold;
+  color: #1DB954; /* Spotify green */
+  margin-bottom: 10px;
+}
+
+.playlist-description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.4; /* Improved line height for readability */
+}
+
+.playlist-singer {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.delete-button {
+  padding: 0;
+  min-width: 0;
+  height: 36px;
+  width: 100px;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center;     /* Centers the content vertically */
+  border-radius: 50%;
+  box-shadow: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  margin-top: 15px;
+  align-self: flex-start; /* Align the button to the left */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f !important;
+  transform: scale(1.1); /* Button slightly enlarges on hover */
+}
+
+.delete-button .MuiSvgIcon-root {
+  font-size: 22px; /* Adjust icon size */
+  color: white;
+}
+
+.playlist-card .MuiTypography-root {
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .playlist-card {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .delete-button {
+    width: 90px; /* Adjust button width for smaller screens */
+  }
+}

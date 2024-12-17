@@ -1,0 +1,78 @@
+/* General Container Styling */
+.login-container {
+    background-color: #f4f6f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px !important;
+  }
+  
+  /* Styling for the Login Box */
+  .login-box {
+    border-radius: 8px;
+  }
+  
+  /* Title Styling */
+  .login-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #00796b;
+  }
+  
+  /* Input Fields */
+  .input-field {
+    margin-bottom: 15px;
+  }
+  
+  /* Button Styling */
+  .button {
+    background-color: #00796b !important;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #004d40 !important;
+  }
+  
+  /* Error Message Styling */
+  .MuiFormHelperText-root {
+    color: #f44336;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+  
+  .custom-button {
+    background-color: #00796b !important;
+    width: 180px;
+    color: white !important;
+    padding: 10px 12px !important;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease !important;
+    text-transform: uppercase;
+  }
+  
+  .custom-button:hover {
+    background-color: #00796b !important;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .login-box {
+      padding: 20px;
+    }
+    .login-title {
+      font-size: 1.5rem;
+    }
+  }
+  
