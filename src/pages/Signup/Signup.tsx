@@ -1,5 +1,5 @@
-import React from 'react';
-import { TextField, Button, Container, Box } from '@mui/material';
+import React, { useState } from 'react';
+import { TextField, Button, Container, Box, Typography } from '@mui/material';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
 import './Signup.css'; // Import the CSS for this component
@@ -16,6 +16,9 @@ const validationSchema = Yup.object({
 });
 
 const Signup: React.FC = () => {
+
+  const [error , setError] = useState("");
+
   const navigate = useNavigate();
   
   const handleSignup = async (values: { name: string; email: string; password: string }) => {
@@ -23,9 +26,10 @@ const Signup: React.FC = () => {
       const res:any = await register(values)
       localStorage.setItem("token", res.token);
     localStorage.setItem("userId", res._id);
+    setError("")
     navigate('/createplaylist')
-  } catch (error) {
-      alert('Something went wrong');
+  } catch (error: any) {
+    setError(error.response.data.message);
   }
 };
 
@@ -79,7 +83,11 @@ const Signup: React.FC = () => {
                   helperText={touched.password && errors.password} // Display error message
                 />
               </Box>
-
+              <Box>
+              <Typography component="span"  style={{color:'red'}}>
+                {error}
+              </Typography>
+              </Box>
               {/* Submit Button */}
               <Box mt={2} display="flex" justifyContent="center">
                 <Button  type="submit"  className="custom-button">
