@@ -116,12 +116,6 @@ const Home: React.FC = () => {
                   <Typography variant="h6" className="playlist-name">{item.song}</Typography>
                   <Typography variant="body2" className="playlist-description">{item.album}</Typography>
                   <Typography variant="body2" color="textSecondary" className="playlist-singer">{item.artist}</Typography>
-                  {item.previewUrl && (
-                    <audio controls>
-                      <source src={item.previewUrl} type="audio/mp3" />
-                      Your browser does not support the audio element.
-                    </audio>
-                  )}
                   <Button
             variant="contained"
             onClick={() => handleAddPlaylist(item)}

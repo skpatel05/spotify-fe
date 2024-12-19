@@ -111,11 +111,11 @@ export const deletePlaylistById = async (playlistId: string, userId: string): Pr
 export const getSearchResults = async (query: string, userId: string) => {
   try {
     const response: AxiosResponse<any> = await apiClient.get(`/playlists/search`, {
-      params: { query, userId }, // Send the query and userId as parameters
+      params: { query, userId },
     });
 
-    return response.data; // Return the response data
+    return response.data;
   } catch (error: any) {
-    throw error; // Throw error to be handled by the caller
+    throw error;
   }
 };
